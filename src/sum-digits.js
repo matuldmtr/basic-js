@@ -17,7 +17,7 @@ function getSumOfDigits(n) {
     .toString()
     .split("")
     .map((item) => Number(item))
-    .reduce((accu, item) => accu + item);
+    .reduce((accu, item) => accu + item, 0);
 
   if (res < 10) {
     return res;
