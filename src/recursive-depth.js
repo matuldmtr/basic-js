@@ -17,17 +17,14 @@ class DepthCalculator {
     this.counter = 1;
   }
   calculateDepth(arr) {
-    if (!Array.isArray(arr)) {
-      return 0;
-    }
+    if (!Array.isArray(arr)) return 0;
 
     let counter = 0;
 
     for (let item of arr) {
       counter = Math.max(counter, this.calculateDepth(item));
-
-      return counter + 1;
     }
+    return counter + 1;
   }
 }
 
